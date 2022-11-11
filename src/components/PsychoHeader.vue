@@ -1,9 +1,5 @@
 <template>
 	<section class="psycho-header container">
-		<!-- <div class="psycho-header__logo">
-			<router-link to="/" class="psycho-header__logo-link">
-			</router-link>
-		</div> -->
 		<div class="psycho-header__menu">
 			<div 
 				v-for="item in menu"
@@ -25,30 +21,12 @@
 					</button>
 				</router-link>
 			</div>
-			<!-- <button type="button" class="psycho-header__record">Записаться</button> -->
 		</div>
 		<div class="psycho-header__menu-mobile">
-			<!-- <div class="psycho-header__menu-mobile--social">
-				<a
-					href="https://t.me/zomlesh"
-					target="_blank"
-					class="psycho-header__menu-mobile--telegram"
-				>
-					<img src="@/assets/img/telegram_icon.png" />
-				</a>
-				<a
-					href="https://wa.me/79175656972"
-					target="_blank"
-					class="psycho-header__menu-mobile--telegram"
-				>
-					<img src="@/assets/img/whatsapp_icon.png" />
-				</a>
-			</div> -->
-
 			<button 
 				type="button"
 				class="psycho-header__menu-mobile--social"
-				@click="toggleModal"
+				@click="$router.push('/contacts')"
 			>Записаться</button>
 			
 			<button 
@@ -132,17 +110,16 @@ export default {
 				color: #ffffff;
 				text-transform: uppercase;
 			}
-		}
 
-		&-mobile--button {
-			width: 30px;
-			height: 30px;
-			color: #ffffff;
-			background-color: #9ab884;
-			border: 0;
-			border-radius: 5px;
+			&--button {
+				width: 30px;
+				height: 30px;
+				color: #ffffff;
+				background-color: #9ab884;
+				border: 0;
+				border-radius: 5px;
+			}
 		}
-		
 	}
 
 	&__links {

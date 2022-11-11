@@ -98,7 +98,7 @@ export default {
     border: none;
 
     &-active {
-      border-bottom: 1px dashed #9ab884;
+      border-bottom: 3px dashed #9ab884;
     }
   }
 }

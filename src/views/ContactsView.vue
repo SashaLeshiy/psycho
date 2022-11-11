@@ -2,9 +2,10 @@
   <div>
     <h3 class="psycho-contacts__title">Контакты</h3>
     <div class="psycho-contacts__line"></div>
-    <p>
+    <p class="psycho-contacts__adress">
       Россошанский проезд  д.3  ТЦ Прага, 3 этаж
     </p>
+    <p>Для записи кликните по иконке вашего мессенджера</p>
     <div class="psycho-contacts__icons">
       <a href="https://t.me/frank0473" target="_blank">
         <img src="@/assets/img/tm_logo.svg" class="psycho-contacts__icon"/>
@@ -53,6 +54,10 @@ export default {
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: #000000;
+  }
+
+  &__adress {
+    padding-bottom: 12px;
   }
 
   &__icons {
