@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView'
 import DiagView from '../views/DiagView'
 import CorrView from '../views/CorrView'
 import ContactsView from '../views/ContactsView'
+import Error404View from '../views/Error404View'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/contacts',
     name: 'contacts',
     component: ContactsView,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'Error404View',
+    component: Error404View,
   },
 ]
 
