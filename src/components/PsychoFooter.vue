@@ -1,7 +1,13 @@
 <template>
   <section class="psycho-footer container">
     <div class="psycho-footer__copyright">
-      Copyright &copy; {{ currentDate }}
+      <a 
+        href="https://github.com/SashaLeshiy"
+        target="_blank"
+        class="psycho-footer__copyright-link"
+      >
+        SL
+      </a> &copy; {{ currentDate }}
     </div>
     <div class="psycho-footer__social">
       <a href="https://t.me/frank0473" target="_blank">
@@ -46,6 +52,12 @@ export default {
     height: 24px;
     margin-right: 8px;
     border-radius: 6px;
+  }
+
+  &__copyright-link {
+    color: #9ab884;
+    text-decoration: none;
+    border-bottom: 1px dotted #000000;
   }
 }
 
