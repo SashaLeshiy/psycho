@@ -4,7 +4,7 @@
     <div class="psycho-main__container container">
       <psycho-photo class="psycho-main__photo"></psycho-photo>
         <div class="psycho-main__content">
-          <transition name="slide-fade">
+          <transition name="slide">
             <router-view></router-view>
           </transition>
         </div>
@@ -66,19 +66,6 @@ export default ({
   src: local("Roboto"), url("@/assets/fonts/roboto-v30-latin_cyrillic-700.woff2") format("woff2"), url("@/assets/fonts/roboto-v30-latin_cyrillic-700.woff") format("woff");
 }
 
-// .slide-fade-enter-active {
-//   transition: all 0.3s ease-out;
-// }
-
-// .slide-fade-leave-active {
-//   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-// }
-
-// .slide-fade-enter-from,
-// .slide-fade-leave-to {
-//   transform: translateX(20px);
-//   opacity: 0;
-// }
 .psycho-main {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   width: 100%;

@@ -170,6 +170,7 @@ export default {
 		border-radius: 8px;
 		background-color: #9ab884;
 		cursor: pointer;
+		transition: background-color .5s ease-in-out;
 	}
 
 	&__record {
