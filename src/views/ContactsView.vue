@@ -17,12 +17,12 @@
     <button type="button" class="psycho-contacts__map-button" @click="toggleOpenMap">
        {{ openMap ? 'Скрыть карту' : 'Показать карту' }}
     </button>
-  </div>
-  <div 
-    v-if="openMap"
-    class="psycho-contacts__map">
-    <div class="psycho-contacts__map-back"></div>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A93356e1ba0f3c54d19b0748fc81b8bfb745a6905fea9d6fcc6017d5146b1f405&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    <div 
+      v-if="openMap"
+      class="psycho-contacts__map">
+      <div class="psycho-contacts__map-back"></div>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A93356e1ba0f3c54d19b0748fc81b8bfb745a6905fea9d6fcc6017d5146b1f405&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
   </div>
 </template>
 

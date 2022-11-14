@@ -3,11 +3,13 @@
     <psycho-header @toggle-modal="toggleModal"></psycho-header>
     <div class="psycho-main__container container">
       <psycho-photo class="psycho-main__photo"></psycho-photo>
-        <div class="psycho-main__content">
-          <transition name="slide">
-            <router-view></router-view>
-          </transition>
-        </div>
+      <div class="psycho-main__content">
+        <transition name="fade">
+          <router-view v-slot="{ Component }">
+            <component :is="Component" :key="Component"/>
+          </router-view>
+        </transition>
+      </div>
     </div>
     <psycho-footer></psycho-footer>
     <psycho-modal
@@ -66,6 +68,15 @@ export default ({
   src: local("Roboto"), url("@/assets/fonts/roboto-v30-latin_cyrillic-700.woff2") format("woff2"), url("@/assets/fonts/roboto-v30-latin_cyrillic-700.woff") format("woff");
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 .psycho-main {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   width: 100%;

@@ -1,5 +1,6 @@
 <template>
-  <img
+  <section>
+    <img
     src="@/assets/img/main_photo1.jpg"
     class="psycho-home__image"
   />
@@ -10,6 +11,7 @@
       <span class="psycho-home__description-first">Детский </span><span class="psycho-home__description-second"> Нейропсихолог</span>
     </div>
   </div>
+  </section>
 </template>
 
 <script>

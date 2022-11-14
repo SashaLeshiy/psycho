@@ -1,17 +1,17 @@
 <template>
-<div>
-  <h3 class="psycho-about__title">
+  <section class="psycho-about">
+    <h3 class="psycho-about__title">
     Как понять, что требуется помощь нейропсихолога
-  </h3>
-  <div class="psycho-about__line"></div>
-  <ul 
-    v-for="elem in about"
-    :key="elem.id"
-    class="psycho-about__list">
-    <div class="psycho-about__list-icon">&#9650;</div>
-    <li class="psycho-about__list-elem">{{ elem.text }}</li>
-  </ul>
-</div>
+    </h3>
+    <div class="psycho-about__line"></div>
+    <ul 
+      v-for="elem in about"
+      :key="elem.id"
+      class="psycho-about__list">
+      <div class="psycho-about__list-icon">&#9650;</div>
+      <li class="psycho-about__list-elem">{{ elem.text }}</li>
+    </ul>
+  </section>
 </template>
 
 <script>
@@ -29,15 +29,6 @@ export default {
 
 
 <style lang="scss" scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
 .psycho-about {
   &__title {
     text-transform: uppercase;
