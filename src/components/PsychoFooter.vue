@@ -1,33 +1,48 @@
 <template>
   <section class="psycho-footer container">
+    <div class="psycho-footer__social">
+      <a href="https://t.me/frank0473" target="_blank">
+        <img src="@/assets/img/tm_logo.svg" class="psycho-footer__icon"/>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=79175656972" target="_blank">
+        <img src="@/assets/img/wh_icon.svg" class="psycho-footer__icon"/>
+      </a>
+    </div>
     <div class="psycho-footer__copyright">
-      <a 
+      <div class="psycho-footer__copyright-date">
+        <a 
         href="https://github.com/SashaLeshiy"
         target="_blank"
         class="psycho-footer__copyright-link"
       >
         SL
       </a> &copy; {{ currentDate }}
-    </div>
-    <div class="psycho-footer__social">
-      <a href="https://t.me/frank0473" target="_blank">
-        <img src="@/assets/img/tm_footer.svg" class="psycho-footer__icon"/>
-      </a>
-      <a href="https://api.whatsapp.com/send/?phone=79175656972" target="_blank">
-        <img src="@/assets/img/wh_footer.svg" class="psycho-footer__icon"/>
-      </a>
+      </div>
+      <psycho-switcher class="psycho-footer__switcher"></psycho-switcher>
     </div>
   </section>
 </template>
 
 <script>
+import PsychoSwitcher from './PsychoSwitcher.vue';
+
 export default {
+
+  components: {
+    PsychoSwitcher,
+  },
 
   data () {
     return {
       currentDate: new Date().getFullYear(),
     }
   },
+
+  methods: {
+    getTheme() {
+      return localStorage.getItem("user-theme")
+    },
+  }
 }
 </script>
 
@@ -38,9 +53,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: var(--theme-color-text);
   font-size: 16px;
   line-height: 20px;
-  background-color: #fff;
+  background-color: var(--theme-bg);
+  transition: background-color .5s ease-in-out;
 
   &__icons {
     display: flex;
@@ -54,10 +71,32 @@ export default {
     border-radius: 6px;
   }
 
+  &__copyright {
+    display: flex;
+    align-items: center;
+  }
+
+  &__copyright-date {
+    margin-right: 14px;
+  }
+
   &__copyright-link {
-    color: #9ab884;
+    color: var(--theme-color-list-icon);
     text-decoration: none;
     border-bottom: 1px dotted #000000;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+
+  &__switcher {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: inherit;
+    }
   }
 }
 

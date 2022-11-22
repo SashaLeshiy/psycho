@@ -27,7 +27,8 @@
 
   &__title {
     margin: 0;
-    color: #000000;
+    color: var(--theme-color-text);
+    font-weight: 200;
     text-transform: uppercase;
   }
 
@@ -36,17 +37,17 @@
     height: 2px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #000000;
+    background-color: var(--theme-color-line);
   }
 
   &__description {
 
     &-first {
-      color: #9ab884;
+      color: var(--theme-color-list-icon);
     }
     
     &-second {
-      color: #000000;
+      color: var(--theme-color-text);
     }
   }
 

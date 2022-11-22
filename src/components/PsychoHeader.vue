@@ -65,8 +65,8 @@ export default {
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
-	// line-height: 70px;
-	background-color: #fff;
+	background-color: var(--theme-bg);
+	transition: background-color .5s ease-in-out;
 	
 	&__logo {
 		&-link {
@@ -74,7 +74,7 @@ export default {
 		}
 
 		&-text {
-			color: #000000;
+			color: var(--theme-color-text);
 		}
 	}
 	
@@ -104,18 +104,18 @@ export default {
 			&--social {
 				width: fit-content;
 				padding: 0 16px;
-				background-color: #9ab884;
+				background-color: var(--theme-color-menu-button-active);
 				border: 0;
 				border-radius: 5px;
-				color: #ffffff;
+				color: var(--theme-color-menu-button-active-text);
 				text-transform: uppercase;
 			}
 
 			&--button {
 				width: 30px;
 				height: 30px;
-				color: #ffffff;
-				background-color: #9ab884;
+				color: var(--theme-color-menu-button-active-text);
+				background-color: var(--theme-color-menu-button-active);
 				border: 0;
 				border-radius: 5px;
 			}
@@ -151,10 +151,12 @@ export default {
 	&__button {
 		padding: 15px;
 		margin-right: 15px;
+		color: var(--theme-color-menu);
 		font-size: 18px;
     line-height: 24px;
 		border: 0;
-		background-color: #fff;
+		background-color: var(--theme-color-menu-button);
+		transition: background-color .5s ease-in-out;
 		cursor: pointer;
 	}
 
@@ -166,9 +168,9 @@ export default {
 		padding: 15px;
 		margin-right: 15px;
 		border: 0;
-		color: #fff;
+		color: var(--theme-color-menu-button-active-text);
 		border-radius: 8px;
-		background-color: #9ab884;
+		background-color: var(--theme-color-menu-button-active);
 		cursor: pointer;
 		transition: background-color .5s ease-in-out;
 	}

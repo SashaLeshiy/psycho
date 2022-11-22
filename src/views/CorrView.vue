@@ -2,7 +2,7 @@
   <div>
     <h3 class="psycho-corr__title">Нейропсихологическая коррекция</h3>
     <div class="psycho-corr__line"></div>
-    <h4>Oдин из эффективных методов помощи детям, помогающий преодолеть:</h4>
+    <h4 class="psycho-corr__description">Oдин из эффективных методов помощи детям, помогающий преодолеть:</h4>
     <ul
       v-for="elem in corr"
       :key="elem.id"
@@ -38,7 +38,12 @@ export default {
 <style lang="scss" scoped>
 .psycho-corr {
   &__title {
+    font-weight: 400;
     text-transform: uppercase;
+  }
+
+  &__description {
+    font-weight: 400;
   }
 
   &__line {
@@ -46,7 +51,7 @@ export default {
     height: 2px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #000000;
+    background-color: var(--theme-color-line);
   }
 
   &__list {
@@ -59,7 +64,7 @@ export default {
       width: 15px;
       height: 15px;
       margin-right: 10px;
-      color: #9ab884;
+      color: var(--theme-color-list-icon);
       transform: rotate(90deg);
     }
     

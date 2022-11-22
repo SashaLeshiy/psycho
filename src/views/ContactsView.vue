@@ -45,6 +45,7 @@ export default {
 <style lang="scss" scoped>
 .psycho-contacts {
   &__title {
+    font-weight: 400;
     text-transform: uppercase;
   }
 
@@ -53,7 +54,7 @@ export default {
     height: 2px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #000000;
+    background-color: var(--theme-color-line);
   }
 
   &__adress {
@@ -73,12 +74,15 @@ export default {
 
   &__map {
     height: 100%;
-    padding-top: 15px;
-    background-color: #ffffff;
+    margin-top: 15px;
+    background-color: var(--theme-bg);
+    border-radius: 8px;
+    overflow: hidden;
 
     &-button {
       padding: 0;
       border: 0;
+      color: var(--theme-color-text);
       background: none;
       border-bottom: 1px dotted;
       cursor: pointer;

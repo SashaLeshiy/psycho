@@ -29,7 +29,7 @@ export default {
 
   &__title {
     margin: 0;
-    color: #000000;
+    color: var(--theme-color-text);
     text-transform: uppercase;
   }
 
@@ -38,17 +38,17 @@ export default {
     height: 2px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #000000;
+    background-color: var(--theme-color-line);
   }
 
   &__description {
     
     &-second {
-      color: #000000;
+      color: var(--theme-color-text);
     }
 
     &-link {
-      color: #000000;
+      color: var(--theme-color-text);
       text-decoration: none;
       border-bottom: 1px dotted #000000;
     }

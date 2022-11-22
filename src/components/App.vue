@@ -37,6 +37,7 @@ export default ({
   data () {
     return {
       isModalOpen: false,
+      userTheme: 'light-theme',
     }
   },
 
@@ -44,12 +45,12 @@ export default ({
     toggleModal () {
       this.isModalOpen = !this.isModalOpen
     }
-  }
+  },
 })
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
@@ -77,6 +78,46 @@ export default ({
 .fade-leave-to {
   opacity: 0;
 }
+
+
+:root {
+  --theme-bg: #ffffff;
+  --theme-color-line: #000000;
+  --theme-color-text: #000000;
+  --theme-main-container: #ffffff;
+  --theme-main-content: #000000;
+  --theme-color-menu-button: #ffffff;
+  --theme-color-menu: #000000;
+  --theme-color-menu-button-active: #9ab884;
+  --theme-color-menu-button-active-text: #ffffff; 
+  --theme-grayscale-image: grayscale(1%);
+  --theme-color-list-icon: #9ab884;
+
+  // стили переключателя
+  --switch-border-color: #000000;
+  --background-color-primary: #ebebeb;
+  --background-color-secondary: #fafafa;
+  --accent-color: #cacaca;
+  --text-primary-color: #222;
+  --element-size: 4rem;
+}
+
+:root.dark-theme {
+  --theme-bg: #222831;
+  --theme-color-line: #393E46;
+  --theme-color-text: #e2e2e2;
+  --theme-main-container: #222831;
+  --theme-main-content: #e2e2e2;
+  --theme-color-menu-button: #222831;
+  --theme-color-menu: #00adb5;
+  --theme-color-menu-button-active: #00adb5;
+  --theme-color-menu-button-active-text: #e2e2e2;
+  --theme-grayscale-image: grayscale(100%);
+  --theme-color-list-icon: #00adb5;
+
+  --switch-border-color: #00adb5;
+}
+
 .psycho-main {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   width: 100%;
@@ -89,8 +130,10 @@ export default ({
     margin: 0 auto;
     padding: 10px;
     display: grid;
+    background-color: var(--theme-main-container);
     box-sizing: border-box;
     overflow: hidden;
+    transition: background-color .5s ease-in-out;
 
     @media screen and (min-width: 768px){
       grid-template-columns: 1fr 1fr;
@@ -102,7 +145,17 @@ export default ({
     position: relative;
     display: flex;
     flex-direction: column;
+    color: var(--theme-main-content);
     overflow: auto;
+    scrollbar-color: var(--theme-bg) var(--theme-main-content);
+    
+    &::-webkit-scrollbar-track {
+      background-color: var(--theme-bg);
+    }
+
+    // &::-webkit-scrollbar {
+    //   background-color: var(--theme-main-content);
+    // }
   }
 
   &__photo {
