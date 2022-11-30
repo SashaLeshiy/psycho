@@ -92,14 +92,6 @@ export default ({
   --theme-color-menu-button-active-text: #ffffff; 
   --theme-grayscale-image: grayscale(1%);
   --theme-color-list-icon: #9ab884;
-
-  // стили переключателя
-  --switch-border-color: #000000;
-  --background-color-primary: #ebebeb;
-  --background-color-secondary: #fafafa;
-  --accent-color: #cacaca;
-  --text-primary-color: #222;
-  --element-size: 4rem;
 }
 
 :root.dark-theme {
@@ -114,8 +106,6 @@ export default ({
   --theme-color-menu-button-active-text: #e2e2e2;
   --theme-grayscale-image: grayscale(100%);
   --theme-color-list-icon: #00adb5;
-
-  --switch-border-color: #00adb5;
 }
 
 .psycho-main {
