@@ -27,6 +27,8 @@ export default {
     background-repeat: no-repeat;
     overflow: hidden;
     border-radius: 10px;
+    filter: var(--theme-grayscale-image);
+    transition: filter .5s ease-in-out;
   }
 
   &__button {

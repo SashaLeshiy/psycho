@@ -48,7 +48,7 @@ export default {
   methods: {
     toggleModal () {
       this.$emit('toggle-modal')
-    }
+    },
   }
 
 }
@@ -62,8 +62,9 @@ export default {
   width: 100%;
   height: 100%;
   padding: 10px;
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--theme-color-text);
+  background-color: var(--theme-bg);
+  transition: all .5s ease-in-out;
 
   &__header {
     width: 100%;
@@ -78,7 +79,7 @@ export default {
     height: 30px;
     border: 0;
     color: #ffffff;
-    background-color: #9ab884;
+    background-color: var(--theme-color-menu-button-active);
     border-radius: 5px;
   }
 
@@ -93,12 +94,13 @@ export default {
   &__button {
     margin-bottom: 20px;
     background: none;
+    color: var(--theme-color-text);
     font-size: 24px;
     line-height: 28px;
     border: none;
 
     &-active {
-      border-bottom: 3px dashed #9ab884;
+      border-bottom: 3px dashed var(--theme-color-menu-button-active);
     }
   }
 }
