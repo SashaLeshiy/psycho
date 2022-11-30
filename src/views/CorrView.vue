@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="psycho-corr__content">
     <h3 class="psycho-corr__title">Нейропсихологическая коррекция</h3>
     <div class="psycho-corr__line"></div>
     <h4 class="psycho-corr__description">Oдин из эффективных методов помощи детям, помогающий преодолеть:</h4>

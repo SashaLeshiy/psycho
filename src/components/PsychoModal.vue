@@ -1,7 +1,6 @@
 <template>
   <div class="psycho-modal container">
     <div class="psycho-modal__header">
-      <psycho-switcher class="psycho-modal__switcher"></psycho-switcher>
       <button 
         type="button" 
         class="psycho-modal__close"
@@ -37,18 +36,12 @@
 
 <script>
 import MENU from '../constants/menu'
-import PsychoSwitcher from './PsychoSwitcher.vue';
 
 export default {
-
-  components: {
-    PsychoSwitcher,
-  },
 
   data () {
 		return {
 			menu: MENU,
-      userTheme: "light-theme",
 		}
 	},
 
@@ -78,7 +71,7 @@ export default {
     padding-top: 10px;
     display: flex;
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: end;
   }
 
   &__close {

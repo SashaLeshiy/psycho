@@ -9,16 +9,17 @@
       </a>
     </div>
     <div class="psycho-footer__copyright">
+      <psycho-switcher class="psycho-footer__switcher"></psycho-switcher>
       <div class="psycho-footer__copyright-date">
+        &copy; {{ currentDate }}
         <a 
         href="https://github.com/SashaLeshiy"
         target="_blank"
         class="psycho-footer__copyright-link"
       >
         SL
-      </a> &copy; {{ currentDate }}
+      </a> 
       </div>
-      <psycho-switcher class="psycho-footer__switcher"></psycho-switcher>
     </div>
   </section>
 </template>
@@ -81,6 +82,7 @@ export default {
   }
 
   &__copyright-link {
+    margin-left: 10px;
     color: var(--theme-color-list-icon);
     text-decoration: none;
     border-bottom: 1px dotted #000000;
@@ -92,11 +94,7 @@ export default {
   }
 
   &__switcher {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-      display: inherit;
-    }
+    margin-right: 10px;
   }
 }
 
