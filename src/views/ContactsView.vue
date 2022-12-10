@@ -14,6 +14,7 @@
         <img src="@/assets/img/wh_icon.svg" class="psycho-contacts__icon"/>
       </a>
     </div>
+    <img src="@/assets/img/cab.png" class="psycho-contacts__enter"/>
     <button type="button" class="psycho-contacts__map-button" @click="toggleOpenMap">
        {{ openMap ? 'Скрыть карту' : 'Показать карту' }}
     </button>
@@ -70,6 +71,12 @@ export default {
     width: 32px;
     height: 32px;
     margin-right: 8px;
+  }
+
+  &__enter {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
   }
 
   &__map {
