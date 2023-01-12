@@ -115,6 +115,10 @@ export default ({
   display: grid;
   grid-template-rows: 70px 1fr 60px;
 
+  @media screen and (min-width: 1600px){
+    grid-template-rows: 105px 1fr 90px;
+  }
+
   &__container {
     width: 100%;
     margin: 0 auto;
@@ -142,6 +146,10 @@ export default ({
     &::-webkit-scrollbar-track {
       background-color: var(--theme-bg);
     }
+
+    @media screen and (min-width: 1280px){
+			padding: 10px 50px;
+		}
 
     // &::-webkit-scrollbar {
     //   background-color: var(--theme-main-content);

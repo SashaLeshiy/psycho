@@ -30,6 +30,16 @@
     color: var(--theme-color-text);
     font-weight: 200;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px){
+			font-size: 34px;
+		}
+  }
+
+  &__description {
+    @media screen and (min-width: 1600px){
+			font-size: 26px;
+		}
   }
 
   &__line {

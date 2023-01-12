@@ -45,6 +45,11 @@ export default {
     text-transform: uppercase;
     transition: all 0.3s;
 
+    @media screen and (min-width: 1600px){
+			padding: 16px 26px;
+      font-size: 18px;
+		}
+
     &:hover {
       background-color: RGBA(255,101,80,0.98);
       cursor: pointer;

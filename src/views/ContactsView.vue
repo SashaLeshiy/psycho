@@ -5,7 +5,7 @@
     <p class="psycho-contacts__adress">
       Россошанский проезд  д.3  ТЦ Прага, 3 этаж
     </p>
-    <p>Для записи кликните по иконке вашего мессенджера</p>
+    <p class="psycho-contacts__adress">Для записи кликните по иконке вашего мессенджера</p>
     <div class="psycho-contacts__icons">
       <a href="https://t.me/frank0473" target="_blank">
         <img src="@/assets/img/tm_logo.svg" class="psycho-contacts__icon"/>
@@ -48,6 +48,10 @@ export default {
   &__title {
     font-weight: 400;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px){
+			font-size: 22px;
+		}
   }
 
   &__line {
@@ -60,6 +64,10 @@ export default {
 
   &__adress {
     padding-bottom: 12px;
+
+    @media screen and (min-width: 1600px){
+			font-size: 18px;
+		}
   }
 
   &__icons {

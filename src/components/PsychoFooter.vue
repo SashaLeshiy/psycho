@@ -60,6 +60,10 @@ export default {
   background-color: var(--theme-bg);
   transition: background-color .5s ease-in-out;
 
+  @media screen and (min-width: 1600px){
+    height: 90px;
+  }
+
   &__icons {
     display: flex;
     
@@ -79,6 +83,10 @@ export default {
 
   &__copyright-date {
     margin-right: 14px;
+
+    @media screen and (min-width: 1600px){
+			font-size: 22px;
+		}
   }
 
   &__copyright-link {

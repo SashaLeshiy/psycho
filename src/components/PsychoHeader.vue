@@ -66,7 +66,11 @@ export default {
 	justify-content: center;
 	box-sizing: border-box;
 	background-color: var(--theme-bg);
-	transition: background-color .5s ease-in-out;
+	transition: background-color .5s ease;
+
+	@media screen and (min-width: 1600px){
+    height: 105px;
+  }
 	
 	&__logo {
 		&-link {
@@ -155,9 +159,15 @@ export default {
 		font-size: 18px;
     line-height: 24px;
 		border: 0;
+		border-radius: 8px;
 		background-color: var(--theme-color-menu-button);
-		transition: background-color .5s ease-in-out;
+		transition: all .5s ease-in-out;
 		cursor: pointer;
+
+		@media screen and (min-width: 1600px){
+			font-size: 24px;
+      line-height: 36px;
+		}
 	}
 
 	&__button:last-of-type {
@@ -172,7 +182,7 @@ export default {
 		border-radius: 8px;
 		background-color: var(--theme-color-menu-button-active);
 		cursor: pointer;
-		transition: background-color .5s ease-in-out;
+		transition: all .5s ease-in-out;
 	}
 
 	&__record {

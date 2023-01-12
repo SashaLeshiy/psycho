@@ -71,7 +71,7 @@ export default {
     padding-top: 10px;
     display: flex;
     box-sizing: border-box;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   &__close {

@@ -33,6 +33,10 @@ export default {
   &__title {
     font-weight: 400;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px){
+			font-size: 22px;
+		}
   }
 
   &__line {
@@ -48,6 +52,10 @@ export default {
     display: flex;
     align-items: center;
     list-style: none;
+
+    @media screen and (min-width: 1600px){
+			font-size: 18px;
+		}
 
     &-icon {
       width: 15px;

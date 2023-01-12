@@ -2,13 +2,13 @@
   <div>
     <h3 class="psycho-diag__title">Диагностика</h3>
     <div class="psycho-diag__line"></div>
-    <p>
+    <p class="psycho-diag__text">
       Под нейропсихологической диагностикой понимают безаппаратный, психологический метод исследования. В его основе лежат нейропсихологические пробы (определенные задания и упражнения, похожие на тестирование), созданные  детскими нейропсихологами для соответствующего возраста.
     </p>
-    <p>
+    <p class="psycho-diag__text">
       Диагностическое обследование дает возможность родителям не только понять особенности развития своего ребенка, но и увидеть его актуальные и потенциальные возможности. Пройти диагностику у детского нейропсихолога полезно детям дошкольного и школьного возраста (от 2 до 16 лет).
     </p>
-    <p>
+    <p class="psycho-diag__text">
       Обследование особенно необходимо детям со сложностями в поведении и усвоении школьной программы (письмо, чтение, счет) или с трудностями дошкольного образования: своевременное обследование и коррекция в нейропсихологии помогут преодолеть эти трудности.
     </p>
   </div>
@@ -19,6 +19,10 @@
   &__title {
     font-weight: 400;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px){
+			font-size: 22px;
+		}
   }
 
   &__line {
@@ -29,24 +33,11 @@
     background-color: var(--theme-color-line);
   }
 
-  &__list {
-    padding: 0;
-    list-style: none;
-
-    &-elem {
-      line-height: 42px;
-    }
-
-    &-elem::before {
-      margin-right: 8px;
-      content: "";
-      display: inline-block;
-      width: 0;
-      height: 0;
-      border-color: transparent transparent transparent #9ab884;
-      border-style: solid;
-      border-width: 5.5px 0 5.5px 9.5px;
-    }
+  &__text {
+    @media screen and (min-width: 1600px){
+			font-size: 18px;
+      line-height: 24px;
+		}
   }
 }
 </style>
