@@ -5,6 +5,8 @@ import DiagView from '../views/DiagView'
 import CorrView from '../views/CorrView'
 import ContactsView from '../views/ContactsView'
 import Error404View from '../views/Error404View'
+import ReviewsView from '../views/ReviewsView'
+
 
 const routes = [
   {
@@ -26,6 +28,11 @@ const routes = [
     path: '/correction',
     name: 'correction',
     component: CorrView,
+  },
+  {
+    path: '/reviews',
+    name: 'reviews',
+    component: ReviewsView,
   },
   {
     path: '/contacts',

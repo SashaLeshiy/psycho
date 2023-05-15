@@ -21,6 +21,11 @@ const MENU = ([
   },
   {
     id: 5,
+    name: 'Отзывы',
+    route: '/reviews',
+  },
+  {
+    id: 6,
     name: 'Контакты',
     route: '/contacts',
   },
